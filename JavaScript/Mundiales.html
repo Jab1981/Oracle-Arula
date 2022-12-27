@@ -1,0 +1,23 @@
+<Meta charset="UTF-8">
+<h1>Programa tablas de multiplicar</h1>
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+        document.write("<br>");
+    }
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var fechaMundial = 1930;
+    var fecha = parseInt (prompt("Ingrese el año para calcular los Mundiales de Futbol"));
+
+    while (fechaMundial < fecha){
+        imprimir ("Se realiza un Mundial de Futbol en el año: " + fechaMundial);
+        fechaMundial = fechaMundial + 4;
+        
+    }
+    imprimir ("Fin");
+    
+</script>

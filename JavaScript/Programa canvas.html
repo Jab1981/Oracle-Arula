@@ -1,0 +1,32 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+var pantalla = document.querySelector("canvas");
+var pixel = pantalla.getContext("2d");
+
+pixel.fillStyle = "green"
+pixel.fillRect(0,0,200,400)
+
+pixel.fillStyle = "red"
+pixel.fillRect(200,0,200,200)
+
+pixel.fillStyle = "yellow"
+pixel.fillRect(200,200,200,200)
+
+pixel.fillStyle = "blue"
+pixel.fillRect(400,0,200,400)
+
+pixel.fillStyle = "orange"
+pixel.beginPath();
+pixel.moveTo(300,200);
+pixel.lineTo(200,400);
+pixel.lineTo(400,400);
+pixel.fill();
+
+pixel.fillStyle = "black"
+pixel.beginPath();
+pixel.arc(300,200,50,0,2*3.14);
+pixel.fill();
+
+
+</script>

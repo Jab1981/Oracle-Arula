@@ -1,0 +1,275 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+header{
+    background-color: #BBBBBB; /*Color de fondo del header*/
+    padding: 20px 0;             /*poicionamiento externo del header se configura en el orden Sup-Inf lado Der-Izq*/
+}
+
+.box{
+    width: 980px;  /*Se agrega un ancho en pixeles es el ancho de la pantalla*/
+    position: relative; /*La posicion relativa nos modifica el ancho de la pantalla*/
+    margin: 0 auto; /*Colocamos el valor 0 para Sup-Inf y auto para los lados Der-Izq*/
+}
+
+nav{
+    position: absolute; /*Absolute posiciona el elemento en cualquier lugar con los valores dados*/
+    top: 120px;         /* Se da un espacion en la parte superior del nav depediendo del tamaño de la misma en pixeles*/
+    right: 0;
+}
+
+nav li{
+    display: inline; /*Definimos si el elemento ocupa el 100% delancho de la pagina*/
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase; /*Text-transform cambia las minusculas a mayusculas con la funcion uppercase*/
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration:none;
+}
+
+nav a:hover{
+    color: #c78c19;           /*Captura los movimientos del mouse dentro los links en el panel de navegacion nav y en funcion de cambio de color*/
+    text-decoration: underline; /*Damos la caracteristica deltextosubrayado al momento de pasar el mouse sobre los link del nav*/
+}
+
+.productos{
+    width: 980px; /*Se agrega un ancho en pixeles es el ancho de la pantalla*/
+    margin: 0 auto; /*Colocamos el valor 0 para Sup-Inf y auto para los lados Der-Izq*/
+    padding: 50px;  /*Colocamos el espacion en el main en la parte superior con referente al header*/
+}
+
+.productos li{                
+    display: inline-block;                /*Llamamos la clase productos y agregamos display inline-block para dejar los items en bloque*/
+    text-align: center;                   /*Alineamosel texto de cada item al centro con text-aling*/
+    width: 30%;                           /*Distribuye los espacios entre cada uno de los elementos en elespacio de la pantalla*/
+    vertical-align: top;                  /*La posicion de los elementos sea en vertical superior*/
+    margin: 0 1.5%;                       /*Agregamos una margen entre llos elementos de un 0 para Sup-Inf y 1.5% para Der-Izq*/
+    padding: 30px 20px;                   /*Damos con padding un espacion de 30px en la vertical y 20px en la horizontal del elemento*/
+    box-sizing: border-box;               /*Definimos el tamaño de la caja, limita los espacios de cada elemento*/
+    border: 3px solid rgb(0, 0, 0);     /*Definimos el borde de cada item width-solid-color*/
+    border-radius: 15px;                  /*Definimos el radius de cada item*/    
+}
+
+.productos li:hover{
+    border-color: #c78c19;      /*Definimos el efecto de cambio de color a los bordes de cada item de la lista de productos*/   
+}
+
+.productos li:active{
+    border-color: #088c19;      /*Definimos el efecto de cambio de color a los bordes de cada item de la lista de productos al dar click con el mouse*/   
+}
+
+.productos h2{
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.productos li:hover h2{  /*Definimos un cambio de tamaño de letra para generar un efecto al pasar el mouse*/
+    font-size: 24px;
+}
+
+.descripcion{
+    font-size: 18px;
+}
+
+.precio{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center; /*Centralizamos el texto del footer*/
+    background: url(imagenes/bg.jpg); /*Podemos utilizar imagenes de fondo con url()*/
+    padding: 40px; /*Establecemos un espacio del footer*/
+}
+
+.text-footer{
+    color: #ffffff; /*Damos color al formato del footer */
+    font-size: 13px;  /*Damos tamaño al formato del footer */
+    margin: 20px;     /*Damos margen al formato del footer */
+}
+
+form{
+    margin: 40px 0; /*Establecemos el ancho de la margen superior e inferior en 40px y margen laterales en 0*/
+}
+
+form label, form legend{ /*En CSS podemos hacer referencia a otro elemento con las mismas caracteristicas utiliizando la , y despues el otro elemento*/  
+    display: block; /*Establecemos el visualizacion de los labes en bloque*/
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padron{  
+    display: block; /*Establecemos el visualizacion de los inputs en bloque*/
+    margin: 0 0 20px;  /*Establecemos la marge superior en 0, derecha en 0 y 20px inferior*/
+    padding: 10px 25px; /*Establecemos el relleno con 10p superior/inferior y 25px para derecha/izquierda*/
+    width: 50%;  /*Establecemos el ancho del input con referencia al ancho del main en un 50% de los 940px*/
+}
+
+.checkbox{
+    margin: 20px 0; /*Establecemos la marge superior e inferior en 20px y para los laterales en 0*/
+}
+
+.enviar {
+    width: 20%; /*Establecemos el ancho del boton con referencia al ancho del main en un 20% de los 940px*/
+    padding: 10px 0; /*Establecemos el espacio interno del boton sup/inf con 15px y der/izq 0*/
+    font-size: 18px; /*Establecemos el tamaño de la fuente del label*/
+    font-weight: bold; /*Establecemos el formato de la fuente en negriña*/
+    color: azure;  /*Establecemos el color de la fuente*/
+    background: orange; /*Establecemos elcolor de fondo del boton*/
+    border: none; /*Eliminamos el border del boton*/
+    border-radius: 10px; /*Establecemos las puntas rondeadas del boton*/
+    transition: 1s all; /*Establecemos el tiempo de transicion del cambio de todas las caracteristicas del boton con la funcion transition*/
+    cursor: pointer; /*Realizamos el cambio depunteero del mouse con la funcion cursor y la propiedad pointer (flecha por Manito)*/
+}
+
+.enviar:hover{
+    background: green; /*Establecemos efecto de cambio de color al fondo del boton con pasar el mouse con la propiedad hover*/
+    transform: scale(1.1); /*Establecemos efecto de cambio de escala de 1.10% del boton con pasar el mouse con la propiedad hover*/
+}
+
+table{
+    margin: 40px 40px;  /*Establecemos la margen de la table en la parte superior e inferior en 40px y para los laterales en 40px*/
+}
+
+thead{
+    background: #088c19; /*Establecemos un fondo para el encabezado de la tabla*/
+    color: azure; /*Establecemos color para el formato del encabezado de la tabla*/
+    font-weight: bold; /*Establecemos el formato de la fuente en negriña*/
+}
+
+td, th{
+    border: 1px solid #000000; /*Definimos el borde de la tabla en 1px de grosor solid negro*/
+    padding: 8px 15px; /*Establecemos el espacio interno cada celda 8px sup/inf y 15px der/izq*/
+}
+
+/*CSS PAGINA PRINCIPAL*/
+
+.imagen-barberia{
+    width: 100%; /*Establecemos el  ancho de la imagen con respecto a la patalla de navegador*/
+}
+
+.principal{
+    width: 100%;    /*Establecemos el ancho del main con referencia a la pantalla del navegador*/
+    margin: 0 auto;  /*Establecemos el ancho de la margen superior en 0 y laterales en automatico*/
+    background: #FEFEFE; /*Establecemos elfondo de section principal*/
+    padding: 3em 0; /*Establecemos el espacio interno superior en 3em a relacion del formato de la pagina y en los laterales en 0*/
+}
+.titulo-principal{
+    text-align: center;
+    font-size: 2em; /*Duplica por 2 el padron de fuente del navegador*/
+    margin: 0 0 1em; /*Duplica por 2 el padron de margen del navegador*/
+    clear: left; /*Limpiamos la configuraciones que provenga despues del titulo*/
+}
+
+.titulo-principal::first-letter{
+    font-weight: bold;
+}
+
+.main p{
+    margin: 0 0 1em; /*Duplica por 1 el padron de margen del navegador*/
+}
+
+.main strong{
+    font-weight: bold; /*Establecemos el fuerte de la fuente de la etiqueta strong*/
+}
+
+.main em{
+    font-style: italic; /*Establecemos el estilo de la fuente de la etiqueta em*/
+}
+
+.acerca{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.utensilios{
+    width: 120px; /*Establecemos el tamaño de la imagen en 120 pixeles*/
+    float: left;  /*usamos la funcion float para alinear el texto a su alrededor*/
+    margin: 0 20px 20px 0; /*Establecemos las margenes en sup 0, 20px der, 20px inferior, 0 izq*/
+}
+
+.mapa{
+    padding: 3em 0; /*Establecemos el espacio interno sup/inf 3 veces el formato de la pagina*/
+    background: linear-gradient(#FEFEFE, #888888)
+}
+
+.mapa p {
+    margin: 0 0 2em; /*Establecemos la margen  sup/der en 0 y la inferior 2 veces el formato de la pagina*/
+    text-align: center; /*Establecemos la ubicacion del texto en el centro*/
+}
+
+.mapa-contenido{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.servicios{
+    width: 100%;    /*Establecemos el ancho del main con referencia a la pantalla del navegador*/
+    margin: 0 auto;  /*Establecemos un margen sup/inf de 0 y en los laterales auto*/
+    padding: 3em 0;
+    background: #888888;
+}
+
+.contenido-servicios{
+    width: 640px; /*Establecemos un ancho de 640 px del contenido*/
+    margin: 0 auto; /*Establecemos un margen sup/inf de 0 y en los laterales auto*/
+}
+
+.lista-servicios{
+    width: 40%;  /*Establecemos el ancho de la lista en un 40% con respecto al div del bloque del contenido de servicios 640px*/
+    display: inline-block;
+    vertical-align: top;
+}
+
+.items:first-child{    /*Establecemos cambiar la primer letra a negriña con la propiedad firts-child*/
+    font-weight: bold; 
+}
+
+.items{
+    line-height: 1.5; /*Establecemos el espacio entre los items de la lista, en 1.5 en 1 y con el 50% del espacio con referente al formato de la pagina*/
+}
+
+.items::before{  /*Establecemos adicionar un elemento antes del elemento con la propiedad before*/
+    content: "\2605"; 
+}
+
+.imagen-corte{
+    width: 60%; /*Establecemos el ancho de la imagen en un 60% con respecto al div del bloque del contenido de servicios*/
+    box-shadow: 8px 8px 25px 10px #000000 ;  /*Establecemos sombra en la imagen 10px en el eje x horizontal y 10px en el eje vertical, 25px para opacidad, 10px para la expancion y por ultimo el color*/
+}
+
+.imagen-corte:hover{
+    opacity: 30%;
+    transition: 1s;
+}
+
+.video{
+    width: 560px; /*Establecemos el ancho del video en 560px como predeterminado*/
+    margin: 1em auto; /*Establecemos una margen de 1em del formato dela pagina en laparte sup/inf y automatico en los laterales*/
+}
+
+@media screen and (max-width:480px){ /*Establecemos el ancho de la pagina en modo que ocupe espacio en las pantallas de dispositivos moviles*/
+    h1{
+        text-align: center;
+    }
+    nav{
+        position: static;
+    }
+
+    .box,.principal,.acerca,.mapa-contenido,.contenido-servicios, .video{ /*Establecemos el ancho de la pagina en modo que ocupe espacio en las pantallas de dispositivos moviles*/
+        width: auto;
+    }
+
+    .lista-servicios,.imagen-corte{
+        width: 100%;
+    }
+}
+    
+
+

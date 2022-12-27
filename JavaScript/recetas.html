@@ -1,0 +1,31 @@
+<Meta charset="UTF-8">
+<h1>Programa de Recetas</h1>
+
+<script>
+
+    var ingredientes = [];
+    var cantidad = parseInt (prompt ("Cuantos ingredientes vas a utilizar?"));
+    var contador = 1;
+
+    while (contador <= cantidad){
+        var ingrediente = prompt ("Agregue el ingrediente: " + contador);
+        var existe = false;
+        for (var posicion =0; posicion <= ingredientes.length; posicion++){
+            if(ingredientes[posicion] == ingrediente){
+                existe = true;
+                alert ("El Ingrediente ya existe: " + ingrediente);
+                break;
+            }
+        }
+        if (existe == false){
+            ingredientes.push(ingrediente);
+            contador++;
+        }
+    }
+
+    alert ("Estos son los ingredientes que escogiste: " + ingredientes);
+
+
+
+
+</script>

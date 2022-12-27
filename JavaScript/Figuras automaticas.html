@@ -1,0 +1,39 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var pantalla = document.querySelector("canvas");
+    var pixel = pantalla.getContext("2d");
+    pixel.fillStyle = "grey";
+    pixel.fillRect(0, 0, 600, 400);
+
+    function disenharCirculo(x, y, radio) {
+        pixel.fillStyle = "red";
+        pixel.beginPath();
+        pixel.arc(x, y, radio, 0, 2 * (Math.PI));
+        pixel.fill()
+    }
+
+    function limpiarPantalla() {
+        pixel.clearRect(0, 0, 600, 400);
+    }
+
+    var x = 0;
+    var sentido = 1;
+
+    function actualizarPantalla() {
+        limpiarPantalla();
+        if (x > 600 ) {
+            sentido = -1;
+        } else if (x < 0) {
+            sentido = 1;
+        }
+        
+        disenharCirculo(x, 20, 10);
+        
+        x = x + sentido;
+        
+    }
+
+    setInterval(actualizarPantalla, 10);
+</script>

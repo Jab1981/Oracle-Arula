@@ -1,0 +1,26 @@
+<Meta charset="UTF-8">
+<h1>Programa de Mostrar texto</h1>
+
+<input />
+<button>Mostrar</button>
+<script>
+    var input = document.querySelector("input");
+    input.focus();
+
+    function mostrar() {
+
+        alert(input.value);
+        input.value = "";
+        input.focus();
+
+    }
+
+
+
+
+    var button = document.querySelector("button");
+    button.onclick = mostrar;
+
+
+
+</script>

@@ -1,0 +1,27 @@
+<Meta charset="UTF-8">
+<h1>Programa tablas de multiplicar</h1>
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+        document.write("<br>");
+    }
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var numeroMiembros = parseInt (prompt("Ingrese el numero de personas"));
+    var contador = 1;
+    var totalEdades = 0;
+
+    while (contador <= numeroMiembros){
+        var edad = parseInt (prompt("Ingrese las edades"));
+        totalEdades = totalEdades + edad;
+        contador++;
+    }
+    promedioEdad = totalEdades/numeroMiembros;
+    promedioEdad = promedioEdad.toFixed(2);
+    imprimir ("La edad media es de: " + promedioEdad)
+    imprimir ("Fin del calculo")
+
+</script>

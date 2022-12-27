@@ -1,0 +1,50 @@
+<Meta charset="UTF-8">
+<h1>Programa de adivinar numero</h1>
+
+<input />
+<button>Verificar numero</button>
+
+
+<script>
+
+    var numeros = [1, 3, 5, 7, 9];
+    var input = document.querySelector("input");
+    input.focus();
+
+    function verificar() {
+
+        var encontrado = false;
+        // primera opcion
+        //for (var posicion = 0; posicion < 5; posicion++) {
+
+           //if (parseInt(input.value) == numeros[posicion]) {
+               // alert("Felicidades, es el numero");
+                //encontrado = true;
+                //break;
+           // }
+        //}
+        
+        //segunda opcion
+
+        for (var posicion = 0; posicion < numeros.length; posicion++){
+            if (parseInt(input.value) == numeros[posicion]){
+             alert ("Numero acertado");
+             encontrado = true;
+             break;
+            }
+
+        }
+
+        if (encontrado == false) {
+
+            alert("numero equivocado");
+
+        }
+        input.focus();
+        input.value = "";
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = verificar;
+
+</script>

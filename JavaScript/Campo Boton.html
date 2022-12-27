@@ -1,0 +1,28 @@
+<Meta charset="UTF-8">
+<h1>Programa de adivinar numero</h1>
+
+<input />
+<button>Verificar numero</button>
+
+
+<script>
+    var numero = Math.round(Math.random() * 10);
+    var input = document.querySelector("input");
+    input.focus();
+
+    function verificar() {
+        if (parseInt(input.value) == numero) {
+            alert("Felicidades, es el numero");
+        }
+        else {
+            alert("Lo senimos,intente de nuevo")
+        }
+        input.focus();
+        input.value = "";
+
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = verificar;
+
+</script>

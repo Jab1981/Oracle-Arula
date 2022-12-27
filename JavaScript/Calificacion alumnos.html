@@ -1,0 +1,33 @@
+<Meta charset="UTF-8">
+<h1>Programa de Recetas</h1>
+
+<script>
+
+    var alumnos = [];
+    var cantidadAlumnos = parseInt (prompt ("Ingrese la cantidad de alumnos a calificar"));
+    var contador = 1;
+
+    while (contador <= cantidadAlumnos){
+        var alumno = prompt ("Agregue el nombre del alumno: " + contador);
+        var existe = false;
+        for (var posicion =0; posicion <= alumnos.length; posicion++){
+            if( alumnos[posicion] == alumno){
+                existe = true;
+                alert ("El alumno ya existe: " + alumno);
+                break;
+            }
+
+        }
+    
+        if (existe == false){
+            alumnos.push(alumno);
+            contador++;
+        }
+    }
+
+    alert ("Estos son los ingredientes que escogiste: " + alumnos);
+
+
+
+
+</script>

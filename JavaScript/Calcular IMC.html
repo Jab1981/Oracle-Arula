@@ -1,0 +1,37 @@
+<Meta charset="UTF-8">
+<h1>Programa de calculo IMC</h1>
+<script>
+    function saltarLinea() {
+        document.write("<br>")
+        document.write("<br>")
+    }
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+    function calcularImc(peso, altura) {
+        imc = peso / (altura * altura);
+        return imc;
+    }
+
+    nombre = prompt("Ingrese su nombre:")
+    peso = parseFloat(prompt("Ingrese su peso en kilogramos:"));
+    altura = parseFloat(prompt("Ingrese su altura en metros:"));
+
+    imcCalculado = calcularImc(peso, altura);
+    imcCalculado = imcCalculado.toFixed(2);
+    imprimir(nombre + " , su IMC es de: " + imcCalculado)
+
+    if (imcCalculado < 18.5) {
+        imprimir(nombre + ", presenta un ponderal Insuficiente")
+    }
+    if (imcCalculado >= 18.5 && imcCalculado < 24.9) {
+        imprimir(nombre + ", presenta un ponderal Normal")
+    }
+    if (imcCalculado >= 25 && imcCalculado <= 29.9) {
+        imprimir(nombre + ", presenta un ponderal es de Sobrepeso")
+    }
+    if (imcCalculado >= 30 ) {
+        imprimir(nombre + ", presenta un ponderal es de Obesidad")
+    }
+</script>

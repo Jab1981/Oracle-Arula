@@ -1,0 +1,30 @@
+<Meta charset="UTF-8">
+<h1>Programa tablas de multiplicar</h1>
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+        document.write("<br>");
+    }
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var contador = 1;
+    var tabla = parseInt(prompt("Ingrese la tabla que desea saber"));
+
+    while (contador <= 10) {
+        var resultado = tabla * contador;
+        imprimir("La tabla que selecciono es: " + tabla + " y el multiplicador es: " + contador + ", el resultado es: " + resultado);
+        contador = contador + 1;
+    }
+    imprimir("Fin del ciclo while");
+
+    //Ciclo for
+    var multiplicador = 1;
+
+    for(var multiplicador = 1; multiplicador <=10; multiplicador = multiplicador + 1){
+        imprimir ("La tabla de:" +tabla + " multiplicado por " + multiplicador + " el resultado es: " + (tabla * multiplicador));
+    }
+
+</script>

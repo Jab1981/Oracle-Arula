@@ -1,0 +1,39 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var pantalla = document.querySelector("canvas");
+    var pixel = pantalla.getContext("2d");
+    pixel.fillStyle = "grey";
+    pixel.fillRect(0, 0, 600, 400);
+
+    var dibujar = false;
+
+    function dibujarCirculo(evento) {
+        if (dibujar) {
+            var x = evento.pageX - pantalla.offsetLeft;
+            var y = evento.pageY - pantalla.offsetTop;
+            pixel.fillStyle = "blue";
+            pixel.beginPath();
+            pixel.arc(x, y, 5, 0, 2 * (Math.PI));
+            pixel.fill()
+        }
+
+    }
+
+    pantalla.onmousemove = dibujarCirculo;
+
+    function habilitarDibujo() {
+
+        dibujar = true;
+    }
+
+    function deshabilitarDibujo() {
+
+        dibujar = false;
+    }
+
+    pantalla.onmousedown = habilitarDibujo;
+    pantalla.onmouseup = deshabilitarDibujo;
+
+</script>

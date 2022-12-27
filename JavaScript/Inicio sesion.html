@@ -1,0 +1,39 @@
+<Meta charset="UTF-8">
+<h1>Programa de adivinar el Numero con # intentos</h1>
+<script>
+    function saltarLinea() {
+        document.write("<br>")
+        document.write("<br>")
+    }
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var usuario = "Alex";
+    var password = "Alex123";
+
+    var intento = 1;
+    var numeroIntentos = 3;
+
+    while (intento <= numeroIntentos){
+        var inicio = prompt ("Ingrese su usuario");
+        var passwordIn = prompt ("Ingrese su contraseña");
+        if ((inicio == usuario) && (passwordIn == password)){
+            alert ("Bienvenido al sistema " + usuario);
+            intento = numeroIntentos;
+        }
+        else{
+            if (intento == 3) {
+                alert ("Se agotaron los intentos permitidos");
+            }
+            else {
+                alert ("Inicio de sesion invalido!");
+            }
+        }
+        intento++;
+    }
+
+
+  
+</script>
